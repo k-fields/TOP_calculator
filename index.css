@@ -40,8 +40,23 @@ body {
 
 .buttons {
     display:flex;
+    flex-direction: column;
     margin-top:10%;
     height: 68%;
+}
+
+.top-buttons{
+    height:20%;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top:1.5em;
+    border:1px solid black;
+}
+
+.bottom-buttons {
+    display:flex;
+    height:80%;
+    justify-self: flex-end;
 }
 
 .numbers {
@@ -52,7 +67,7 @@ body {
 
 .digit {
     box-sizing: border-box;
-    border:.1rem dashed green;
+    border:.1rem solid black;
     flex-grow: 2;
     width: 33%;
     height:25%;
