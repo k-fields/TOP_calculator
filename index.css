@@ -13,15 +13,12 @@ body {
 
 .main-container {
     border:3px solid green;
+    border-radius: 5%;
     height: 85%;
-    width: 28%;
+    width: 30%;
     display:flex;
     flex-direction: column;
     padding: 1.5rem;
-}
-
-.main-container{
-    border-radius: 5%;
 }
 
 .display{
@@ -33,9 +30,7 @@ body {
     border:1px solid purple;
 }
 
-.numbers {
-    border-right: 1px solid hotpink;
-}
+
 
 /* ***************** */
 
@@ -56,17 +51,14 @@ body {
 }
 
 .digit {
+    box-sizing: border-box;
+    border:.1rem dashed green;
     flex-grow: 2;
     width: 33%;
+    height:25%;
     text-align: center;
+    padding-top:2em;
 }
-
-#0, #dot {
-    flex-grow:1;
-    width:33%;
-    text-align:center;
-}
-
 
 .operators{
     flex-grow: 1;
