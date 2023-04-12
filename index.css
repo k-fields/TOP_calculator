@@ -21,14 +21,9 @@ body {
     flex-direction: column;
     padding: 1.5rem;
 }
-
-.display{
-    border-radius: 0.7em;
-}
 /* BORDERS */
 
 .main-container > div {
-    border:1px solid black;
     box-sizing: border-box;
 }
 
@@ -37,7 +32,30 @@ body {
 /* ***************** */
 
 .display {
+    /*border-radius:0.4em;*/
+    display:flex;
+    flex-direction:column;
     height: 20%;
+}
+
+.history, .current {
+    
+    width:100%;
+    height:50%;
+}
+
+.history {
+    border:1px solid black;
+    border-radius: 0.4em 0.4em 0 0;
+}
+
+.current {
+    border-radius: 0 0 0.4em 0.4em;
+    border-left: 1px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-style:solid;
+    border-color: black;
 }
 
 .buttons {
@@ -74,7 +92,7 @@ body {
     width: 33%;
     height:25%;
     text-align: center;
-    padding-top:2em;
+    padding-top:1em;
 }
 
 .operators{
@@ -86,7 +104,7 @@ body {
 
 .operator{
     box-sizing: border-box;
-    padding-top: 1.5em;
+    padding-top: 1em;
     border:1px solid black;
     flex-grow:1;
     text-align: center;
