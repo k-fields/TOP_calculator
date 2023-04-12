@@ -25,10 +25,12 @@ const callbacks = {
     '=':equals
 }
 
+const displayCurrent = document.getElementsByClassName('current')[0];
+
 document.addEventListener('keydown', (e) => {
     if (!(callbacks[e.key] !== undefined)){ //if key pressed is not tied to any function
         if (/[0-9\.]/.test(e.key))  
-            console.log("You pressed " + e.key);
+            displayCurrent.textContent += e.key;
     }
     else
         callbacks[e.key]();
