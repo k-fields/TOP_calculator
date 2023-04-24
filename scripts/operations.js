@@ -1,4 +1,4 @@
-const operations = {
+export const operations = {
     'multiply': () => {
         console.log("Trigger multiply")
     },
@@ -15,5 +15,3 @@ const operations = {
         console.log("Trigger equals");
     }
 }
-
-export default operations;
