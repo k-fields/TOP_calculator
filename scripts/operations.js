@@ -1,6 +1,6 @@
 export const operations = {
-    'multiply': () => {
-        console.log("Trigger multiply")
+    'multiply': (elements) => {
+        console.log("Trigger multiply: " + elements)
     },
     'subtract': () => {
         console.log("Trigger subtract");
