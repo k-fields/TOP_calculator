@@ -1,29 +1,4 @@
-function multiply(){
-    console.log("Trigger multiply");
-}
-
-function subtract() {
-    console.log("Trigger subtract");
-}
-
-function add() {
-    console.log("Trigger add");
-}
-
-function divide() {
-    console.log("Trigger divide");
-}
-function equals() {
-    console.log("Trigger equals");
-}
-
-const callbacks = {
-    '*':multiply,
-    '-':subtract,
-    '+':add,
-    '/':divide,
-    '=':equals
-}
+import {operations} from './operations.js'
 
 const displayCurrent = document.getElementsByClassName('content')[0];
 const displayCurrentStyles = getComputedStyle(displayCurrent);
@@ -39,7 +14,7 @@ document.addEventListener('keydown', (e) => {
         console.log("Text: " + displayCurrentStyles.width+" | Display: "+displayCurrentParentStyles.width+" | Key: "+e.key);
         
     }
-    else
-        callbacks[e.key]();
+
 })
 
+operations.multiply();
