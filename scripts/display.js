@@ -1,11 +1,15 @@
 import {operations} from './operations.js'
 
+const execute = {
+    '*':operations.multiply
+}
+
 const displayCurrent = document.getElementsByClassName('content')[0];
 const displayCurrentStyles = getComputedStyle(displayCurrent);
 const displayCurrentParentStyles = getComputedStyle(displayCurrent.parentNode);
 
 document.addEventListener('keydown', (e) => {
-    if (!(callbacks[e.key] !== undefined)){ //if key pressed is not tied to any function
+    if (!(execute[e.key] !== undefined)){ //if key pressed is not tied to any function
         if (/[0-9\.]/.test(e.key) && 
         parseInt(displayCurrentStyles['width']) < parseInt(displayCurrentParentStyles['width']))
         {
@@ -17,4 +21,6 @@ document.addEventListener('keydown', (e) => {
 
 })
 
-operations.multiply();
+
+
+execute['*']("sup");
