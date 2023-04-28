@@ -23,4 +23,4 @@ document.addEventListener('keydown', (e) => {
 
 
 
-execute['*']("sup");
+console.log(execute['*']([2,3]));
