@@ -16,7 +16,17 @@ export const operations = {
     },
     'equals': () => {
         console.log("Trigger equals");
-    }
+    },
+}
+
+export function handler(buffer){
+    if (buffer.length > 2) {
+            
+        if (operations[buffer[0]] === undefined) return;
+
+        operations[buffer[0]](buffer.slice(1));
+
+        }
 }
 
 console.log(operations.multiply([2,3,5]));
