@@ -19,8 +19,8 @@ export const operations = {
         
         return elements.reduce((acc, element) => acc /= element);
     },
-    'handler': (buffer) => {
-        console.log("Handler called.")
+    'operationHandler': (buffer) => {
+        console.log("Operations handler called.")
     },
 }
 
