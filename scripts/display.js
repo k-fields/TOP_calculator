@@ -8,16 +8,18 @@ const displayCurrentParentStyles = getComputedStyle(displayCurrent.parentNode);
 let buffer = [];
 
 document.addEventListener('keydown', (e) => {
-    
-        if (/[0-9\.]/.test(parseInt(e.key)) && 
-        parseInt(displayCurrentStyles['width']) < parseInt(displayCurrentParentStyles['width']))
-        {
-            displayCurrent.textContent += parseInt(e.key);
-        }
-        console.log("Text: " + displayCurrentStyles.width+" | Display: "+displayCurrentParentStyles.width+" | Key: "+e.key);
-        
+    handle(e.key);        
 })
 
 document.addEventListener('click', (e) => {
-   // execute['handler'];
+   handle(e.target.innerText);
 });
+
+function handle (key){
+    if (/[0-9\.]/.test(parseInt(key)) && 
+        parseInt(displayCurrentStyles['width']) < parseInt(displayCurrentParentStyles['width']))
+        {
+            displayCurrent.textContent += parseInt(key);
+        }
+        console.log("Text: " + displayCurrentStyles.width +" | Display: "+displayCurrentParentStyles.width+" | Key: "+ key);
+}
