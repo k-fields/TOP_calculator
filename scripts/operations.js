@@ -19,18 +19,14 @@ export const operations = {
         
         return elements.reduce((acc, element) => acc /= element);
     },
-    'equals': (buffer) => {
-        if (buffer.length > 2) {
-            
-            if (operations[buffer[0]] === undefined) return;
-    
-            operations[buffer[0]](buffer.slice(1));
-    
-            }
+    'handler': (buffer) => {
+        console.log("Handler called.")
     },
 }
 
-console.log(operations.multiply([2,3,5]));
+/*
+console.log(`Multiply 2*3*5: ${operations.multiply([2,3,5])}`);
 console.log(`Subtract 4 - 5: ${operations.subtract([4,5])}`);
 console.log(`Add 5+2+3: ${operations.add([5,2,3])}`);
 console.log(`Divide 5/2: ${operations.divide([5,2])}`);
+*/
