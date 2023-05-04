@@ -1,4 +1,4 @@
-import {operations, handler} from './operations.js'
+import {operations} from './operations.js'
 
 const execute = {
     '*':operations.multiply,
@@ -35,7 +35,7 @@ document.addEventListener('keydown', (e) => {
         else if (displayCurrent.textContent && buffer){
             buffer[2] = 
         }
-        handler(buffer)
+        equals(buffer)
     }
 })
 
